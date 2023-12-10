@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+    <%- include('header'); -%>
+
+    <div id="game">
+        <div v-if="connected">
+            
+            <div v-if="stageRound.stage == 1">
+                <h2>Waiting for more players to join!</h2>
+                <%- include('join'); -%>
+                <%- include('chat'); -%>
+            </div>
+
+        </div>
+    </div>
+
+    <%- include('footer'); -%>
+
+</html>

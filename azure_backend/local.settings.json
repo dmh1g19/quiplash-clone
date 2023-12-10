@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=playermanage;AccountKey=iiaP20he591FvrX4cCId8vsiAnWKjN1/rdPcRXw9HORHYZ4WaO50w/YHtgmiEHbIX/ANiGzgFXfE+AStVtJLbw==;EndpointSuffix=core.windows.net",
+    "AzureCosmosDBConnectionString": "AccountEndpoint=https://quiplashy.documents.azure.com:443/;AccountKey=aBD5f8vSUTcyVtpcsPrwRXfu5GmVUWB76w8XAtffLZaAexp6DnRVRUnKpgpXeVjZg7RmByYcdHKyACDblRgECw==;",
+    "Database" : "quiplashy",
+    "PlayerContainer" : "player",
+    "PromptContainer" : "prompt",
+    "FunctionAppKey" : "366ZVOinH8HJlqjFvBfyGBIBuyCttUuaEfVI5vZ5-Ih-AzFukxxQUA==",
+    "DeploymentURL" : "https://player-manage.azurewebsites.net",
+    "TranslationEndpoint": "https://api.cognitive.microsofttranslator.com/",
+    "TranslationKey": "aBD5f8vSUTcyVtpcsPrwRXfu5GmVUWB76w8XAtffLZaAexp6DnRVRUnKpgpXeVjZg7RmByYcdHKyACDblRgECw=="    
+  }
+}

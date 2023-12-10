@@ -1,0 +1,16 @@
+<div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
+    <button @click="advance()" class="btn btn-bub">Advance</button>
+</div>   
+
+<div v-for="(prompt, index) in promptsToAnswer" :key="index">
+    <strong>{{ prompt.text }}</strong>
+    <input v-model="answers[index]" @keyup.enter="submitAnswers" type="text">
+</div>
+
+<div v-if="!answersSubmitted" @click="submitAnswers">
+    <button>Submit Answers</button>
+</div>
+<br>
+<div v-if="answersSubmitted">
+    Answer submitted, waiting for others...
+</div>

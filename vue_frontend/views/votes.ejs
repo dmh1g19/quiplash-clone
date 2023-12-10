@@ -1,0 +1,23 @@
+<div v-if="votingPrompt">
+    <h1> Vote! </h1>
+    <div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
+        <button @click="advanceVote()" class="btn btn-bub">Advance</button>
+    </div>
+    <%- include('debug') -%>
+    <br>
+    <strong>{{ votingPrompt.text }}</strong>
+
+    <div v-if="!voteSubmitted">
+        <button @click="getVote(Object.keys(votingPrompt.answers[0])[0])">{{ Object.values(votingPrompt.answers[0])[0] }}</button>
+        <br>
+        <button @click="getVote(Object.keys(votingPrompt.answers[1])[0])">{{ Object.values(votingPrompt.answers[1])[0] }}</button>
+    </div>
+    <div v-else>
+        <p>Waiting for others...</p>
+    </div>
+</div>
+<!-- <div v-else>
+    <strong>
+        <p>404 Oops something went wrong with the voting display!</p>
+    </strong>
+</div> -->

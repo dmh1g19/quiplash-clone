@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+    <%- include('header'); -%>
+    
+    <div id="game">
+ 
+        <div v-if="stageRound.stage===1 && loggedIn===false">
+            <%- include('login'); -%>
+        </div>       
+
+        <div v-if="stageRound.stage===1 && loggedIn===true">
+            <p>Welcome <strong>{{username}}</strong></p>
+            <%- include('debug') -%>
+
+            <div v-if="stageRound.stage === 1">
+
+                <div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
+                    <button @click="advance()" class="btn btn-bub">Advance</button>
+                </div>    
+
+                <%- include('join'); -%>
+                <%- include('chat'); -%>
+
+                <div v-if="error" class="alert alert-danger">
+                    <strong>Error: </strong> {{error}}
+                </div>
+
+            </div>
+        </div>
+
+        <div v-else-if="stageRound.stage === 2">
+            <%- include('prompt'); -%>
+        </div>
+        
+        <div v-else-if="stageRound.stage === 3">
+            <%- include('answers'); -%>
+        </div>
+        
+        <div v-else-if="stageRound.stage === 4">
+            <%- include('votes'); -%>
+        </div>
+        
+        <div v-else-if="stageRound.stage === 5">
+            <%- include('results'); -%>
+        </div>
+
+        <div v-else-if="stageRound.stage === 6">
+            <%- include('scores'); -%>
+        </div>
+        
+        <div v-else-if="stageRound.stage === 7">
+            <%- include('gameOver'); -%>
+        </div>
+
+        <div v-else-if="stageRound.stage > 7">
+            <%- include('404'); -%>
+        </div>
+    </div>
+
+    <%- include('footer'); -%>

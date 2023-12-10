@@ -1,0 +1,17 @@
+<h1>Current scores</h1>
+
+<div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
+    <button @click="advance()" class="btn btn-bub">Advance</button>
+</div>
+  
+<div v-if="error" class="alert alert-danger">
+    <strong>Error: </strong> {{error}}
+</div>
+
+<%- include('debug') -%>
+
+<ol>
+    <li v-for="player in players.sort((p, p2) => p2.totalScore - p.totalScore )">
+        <h4>{{player.username}} Total Score: {{player.totalScore}} Round: {{player.currScore}}</h4>
+    </li>
+</ol>
