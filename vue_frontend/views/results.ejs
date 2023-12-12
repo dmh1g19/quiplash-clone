@@ -1,18 +1,23 @@
-<h1> Results !</h1>
+<head>
+    <link rel="stylesheet" href="/static/css/results.css">
+</head>
 
 <%- include('debug') -%>
+<div class="results-screen">
+    <h1>Results!</h1>
+        <div v-if="me.admin && votingEnd === false" class="ms-auto d-inline align-self-end"> 
+            <button @click="advanceStage5()" class="btn btn-bub">Advance</button>
+        </div>
+        <div v-if="me.admin && votingEnd" class="ms-auto d-inline align-self-end">
+            <button @click="advanceStage6()" class="btn btn-bub">Advance</button>
+        </div>
+        <br>
+        <br>
 
-<div v-if="me.admin && votingEnd === false" class="ms-auto d-inline align-self-end"> 
-    <button @click="advanceStage5()" class="btn btn-bub">Advance</button>
+        <div><strong>{{ promptPrevious.text }}</strong></div>
+        <br>
+    <div class="score-display">
+        <div><strong>Current Score: </strong>{{ currScore }}</div>
+        <div><strong>Total Score: </strong>{{ totalScore }}</div>
+    </div>
 </div>
-<div v-if="me.admin && votingEnd" class="ms-auto d-inline align-self-end">
-    <button @click="advanceStage6()" class="btn btn-bub">Advance</button>
-</div>
-
-<div><strong>{{ promptPrevious.text }}</strong></div>
-
-<!-- <div v-if="votedUser != username">Better luck next time {{ username }}</div>
-<div v-else-if="votedUser == username"><div><strong>Congratulations:</strong>{{ votedUser }}</div></div> -->
-<!-- <div><strong>TotalScore: </strong>{{ totalScore }}</div> -->
-<div><strong>Current Score: </strong>{{ currScore }}</div>
-<div><strong>Total Score: </strong>{{ totalScore }}</div>

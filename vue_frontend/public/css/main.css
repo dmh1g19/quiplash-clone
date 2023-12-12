@@ -1,0 +1,211 @@
+body {
+    background-image: url('/static/a.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #d0acc2;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; 
+}
+
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    color: #FF69B4; 
+    text-shadow: 1px 1px 2px #fff;
+}
+
+.container {
+    background-color: rgba(255,255,255,0.8);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+    height: 100vh;
+    width: 75vh;
+    border-radius: 20px; 
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+#chat { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    overflow: auto;
+    max-height: 80vh;
+}
+
+#chat li { 
+    padding: 10px 20px;
+    background-color: #FFC0CB; 
+    border: 2px solid #FF69B4; 
+    border-radius: 10px; 
+    margin: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
+}
+
+#chat li:nth-child(odd) { 
+    background-color: rgba(255, 182, 193, 0.8); 
+}
+
+.input-field {
+    width: 80%; 
+    padding: 10px 20px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 15px;
+    border: 2px solid #FF69B4;
+    background-color: #FFF0F5;
+    font-size: 16px; 
+    color: #333; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; 
+}
+
+.input-field:focus {
+    outline: none; 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); 
+    background-color: #FFC0CB; 
+}
+
+.players {
+  margin: 0 auto; 
+  padding: 0;
+  overflow: auto;
+  max-height: 80vh;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  text-align: center;
+}
+
+.players h3 {
+    color: #FF69B4;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+.players ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    padding: 0;
+    list-style-type: none; 
+}
+
+
+.players li {
+    list-style-type: none;
+    padding: 10px 20px;
+    background-color: #FFC0CB; 
+    border: 2px solid #FF69B4; 
+    border-radius: 15px; 
+    margin: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.players li:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-bub {
+    padding: 8px 15px;
+    background-color: #FF69B4; 
+    color: white; 
+    border: none; 
+    border-radius: 25px; 
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; 
+    font-size: 16px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    position: center;
+}
+
+.btn-bub:hover {
+    background-color: #FFB6C1; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25); 
+    transform: translateY(-2px); 
+}
+
+.btn-bub:active {
+    background-color: #FF69B4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px); 
+}
+
+
+.switch-form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dcenter-login-butn {
+  text-align: center;
+}
+
+
+.switch-form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn-primary:hover {
+  background-color: #0056b3; 
+}
+.btn-link {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%; 
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box; 
+}
+
+#login {
+  max-width: 400px; 
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}

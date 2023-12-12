@@ -1,20 +1,23 @@
+<head>
+    <link rel="stylesheet" href="/static/css/prompt.css">
+</head>
+
 <div>
     <h2>Type your questions now!</h2>
-    <strong>Stage:</strong> {{stageRound.stage}}
-    <strong>Round: </strong>{{stageRound.round}}
+    <%- include('debug') -%>
+
+    <br>
     <div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
        <button @click="advance()" class="btn btn-bub">Advance</button>
     </div>   
   
 <div v-if="me.state==0">
     <input class="form-control" v-model="submittedPrompt" @keyup.enter="makePrompt()" type="text" placeholder="Type here!">
-</div> 
+</div>
+
 <div v-if="me.state==1">
     <p>Submitted!</p>
 </div> 
 
-    <div v-if="error" class="alert alert-danger">
-        <strong>Error: </strong> {{error}}
-    </div>
-    
+    <%- include('error') -%>
 </div>

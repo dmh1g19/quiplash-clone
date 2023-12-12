@@ -1,0 +1,29 @@
+.game-over-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.leaderboard-title {
+    color: #f5c4e8;
+    margin-bottom: 20px;
+}
+
+.leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.leaderboard-entry {
+    background-color: #f29db7;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.player-name {
+    font-weight: bold;
+}
+
+.games-played, .total-score {
+    font-style: italic;
+}

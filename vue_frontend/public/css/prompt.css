@@ -1,0 +1,43 @@
+div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #FF69B4;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+.form-control {
+    width: 60%;
+    margin: 20px auto; 
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #FF69B4;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+.btn-bub {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #FFC0CB;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-bub:hover {
+    background-color: #FF69B4;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}

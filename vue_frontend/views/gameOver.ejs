@@ -1,8 +1,14 @@
-<h1>Leaderboard</h1>
-<br>
+<head>
+    <link rel="stylesheet" href="/static/css/leaderboard.css">
+</head>
 
-<ol>
-    <li v-for="entry in leaderboard">
-        {{ entry.username }} games played: {{ entry.games_played }} total score: {{ entry.total_score }}
-    </li>
-</ol>
+<div class="game-over-container">
+    <h1 class="leaderboard-title">Leaderboard</h1>
+    <ol class="leaderboard-list">
+        <li v-for="entry in leaderboard" class="leaderboard-entry">
+            <span class="player-name">{{ entry.username }}</span> 
+            - games played: <span class="games-played">{{ entry.games_played }}</span>, 
+            total score: <span class="total-score">{{ entry.total_score }}</span>
+        </li>
+    </ol>
+</div>

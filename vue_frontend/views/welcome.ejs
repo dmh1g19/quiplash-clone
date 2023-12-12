@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="/static/css/welcome.css">
+</head>
+
+<div v-if="stageRound.stage === 1">
+    <div class="welcome-screen">
+        <%- include('debug') -%>
+
+        <br>
+        <div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
+            <strong class="makePink">You are admin! Click advance to move to next stage.</strong>
+        </div>
+        <br>
+        <br>
+
+        <div class="welcome-message">
+            <h2>Hello <strong>{{username}}!</strong></h2>
+            <div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
+                <button @click="advance()" class="btn btn-bub">Advance</button>
+            </div>    
+        </div>
+        <br>
+
+        <div class="joined-players">
+            <%- include('join'); -%>
+        </div>
+
+        <div class="chat-box">
+            <%- include('chat'); -%>
+        </div>
+
+        <div class="error-container">
+            <%- include('error'); -%>
+        </div>
+    </div>
+</div>

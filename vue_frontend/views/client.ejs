@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
     <%- include('header'); -%>
     
     <div id="game">
@@ -10,23 +9,7 @@
         </div>       
 
         <div v-if="stageRound.stage===1 && loggedIn===true">
-            <p>Welcome <strong>{{username}}</strong></p>
-            <%- include('debug') -%>
-
-            <div v-if="stageRound.stage === 1">
-
-                <div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
-                    <button @click="advance()" class="btn btn-bub">Advance</button>
-                </div>    
-
-                <%- include('join'); -%>
-                <%- include('chat'); -%>
-
-                <div v-if="error" class="alert alert-danger">
-                    <strong>Error: </strong> {{error}}
-                </div>
-
-            </div>
+            <%- include('welcome'); -%>
         </div>
 
         <div v-else-if="stageRound.stage === 2">
@@ -59,3 +42,4 @@
     </div>
 
     <%- include('footer'); -%>
+</html>

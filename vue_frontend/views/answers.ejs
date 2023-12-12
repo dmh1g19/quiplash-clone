@@ -1,16 +1,28 @@
+<head>
+    <link rel="stylesheet" href="/static/css/answers.css">
+</head>
+
 <div v-if="me.admin" class="ms-auto d-inline align-self-end"> 
     <button @click="advance()" class="btn btn-bub">Advance</button>
 </div>   
 
-<div v-for="(prompt, index) in promptsToAnswer" :key="index">
-    <strong>{{ prompt.text }}</strong>
-    <input v-model="answers[index]" @keyup.enter="submitAnswers" type="text">
+<div class="center submitted">
+    <h2>Make a funny!</h2>
 </div>
 
-<div v-if="!answersSubmitted" @click="submitAnswers">
-    <button>Submit Answers</button>
+<div v-for="(prompt, index) in promptsToAnswer" :key="index" class="center">
+    <strong>{{ prompt.text }}</strong>
+    <input v-model="answers[index]" @keyup.enter="submitAnswers" type="text">
+    <br>
 </div>
+
 <br>
-<div v-if="answersSubmitted">
+<div v-if="!answersSubmitted" @click="submitAnswers" class="center">
+    <button class="btn btn-bub">Submit Answers</button>
+</div>
+
+<br>
+
+<div v-if="answersSubmitted" class="center submitted">
     Answer submitted, waiting for others...
 </div>
